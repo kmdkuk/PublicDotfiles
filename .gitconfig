@@ -1,0 +1,7 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim -c \"set fenc=utf-8\"
+	autocrlf = input
+[alias]
+	tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
